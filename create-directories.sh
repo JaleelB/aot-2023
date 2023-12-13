@@ -18,7 +18,7 @@ current_date=$(date '+%Y-%m-%d')
 # Convert dates to days since epoch
 start_day=$(date_to_days "$start_date")
 current_day=$(date_to_days "$current_date")
-day_diff=$(( (current_day - start_day) / 86400 ))
+day_diff=$(( (current_day - start_day) / 86400 + 1 ))
 
 for (( i=1; i<=day_diff; i++ )); do
   day_dir="day-$i"
